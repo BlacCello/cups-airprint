@@ -1,0 +1,20 @@
+version: '3.5'
+
+services:
+  cups:
+    container_name: cups
+    image: blaccello/cups-airprint:v1.0
+    # build: .
+    restart: unless-stopped
+    network_mode: host
+    environment:
+      CUPS_USER: cups
+      CUPS_PASSWORD: cups
+      DEFAULT_PAPER_SIZE: a4
+    secrets:
+      - cups_password
+    volumes:
+      - "./config:/config"
+secrets:
+  cups_password:
+    file: ./cups_password
