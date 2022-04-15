@@ -2,6 +2,10 @@
 
 Cups 2.4 server to support Airprint for older printers
 
+## Docker image note
+
+The image published to Dockerhub is only suitable for x86. If you want to run it on an ARM processor (e.g. Raspberry Pi 4), please run a `docker-compose build` yourselves for now.
+
 ## Configuration
 
 ### docker-compose
